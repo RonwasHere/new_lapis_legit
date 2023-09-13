@@ -26,18 +26,18 @@ class SearchPage extends StatelessWidget {
             Container(
               height: 80,
               width: MediaQuery.of(context).size.width,
-              color: Colors.yellow,
+              color: Colors.grey,
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 25),
             Text(
               'Pencarian Terakir',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-                color: Colors.grey,
+                color: Color(0xff4a4d50),
               ),
             ),
-            SizedBox(height: 15),
+            SizedBox(height: 25),
             Text(
               'Belum ada riwayat pencarian ',
               style: TextStyle(
@@ -46,7 +46,7 @@ class SearchPage extends StatelessWidget {
                 color: Colors.grey,
               ),
             ),
-            SizedBox(height: 20),
+            SizedBox(height: 35),
             Text(
               'Pencarian Terpopuler',
               style: TextStyle(
@@ -55,7 +55,7 @@ class SearchPage extends StatelessWidget {
                 color: Color(0xff4a4d50),
               ),
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 15),
             Row(
               // mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -64,7 +64,7 @@ class SearchPage extends StatelessWidget {
                   height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
@@ -73,13 +73,13 @@ class SearchPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(),
+                SizedBox(width: 20),
                 Container(
-                  width: 90,
+                  width: 60,
                   height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
@@ -88,13 +88,13 @@ class SearchPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Spacer(),
+                SizedBox(width: 20),
                 Container(
                   width: 90,
                   height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
@@ -105,15 +105,15 @@ class SearchPage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 5),
+            SizedBox(height: 10),
             Row(
               children: [
                 Container(
-                  width: 90,
+                  width: 55,
                   height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
@@ -122,13 +122,13 @@ class SearchPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(width: 5),
+                SizedBox(width: 15),
                 Container(
                   width: 90,
                   height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
@@ -148,7 +148,7 @@ class SearchPage extends StatelessWidget {
                 color: Color(0xff4a4d50),
               ),
             ),
-            SizedBox(height: 6),
+            SizedBox(height: 15),
             Row(
               children: [
                 Container(
@@ -156,7 +156,7 @@ class SearchPage extends StatelessWidget {
                   height: 30,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: Colors.green,
+                    color: Colors.grey,
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(6.0),
@@ -170,6 +170,11 @@ class SearchPage extends StatelessWidget {
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+            Navigator.pushNamed(context, '/merchant');
+          }),
     );
   }
 }
