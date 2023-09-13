@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_lapis_legit/notification.dart';
+import 'package:new_lapis_legit/search.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         '/':(context) => const NotificationPage(),
+        '/search':(context) => const SearchPage(),
       },
     );
   }

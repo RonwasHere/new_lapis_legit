@@ -54,6 +54,11 @@ class NotificationPage extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+        Navigator.pushNamed(context, '/search');
+      }),
     );
   }
 }
