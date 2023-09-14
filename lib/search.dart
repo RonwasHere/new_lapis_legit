@@ -22,11 +22,26 @@ class SearchPage extends StatelessWidget {
                 color: Colors.black,
               ),
             ),
-            SizedBox(height: 15),
-            Container(
-              height: 80,
-              width: MediaQuery.of(context).size.width,
-              color: Colors.grey,
+            SizedBox(height: 25),
+            //search bar
+            TextFormField(
+              style: TextStyle(fontSize: 20),
+              decoration: InputDecoration(
+                fillColor: Colors.grey.shade600,
+                filled: false,
+                enabledBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 2,
+                    color: Colors.grey,
+                  ),
+                ),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: BorderSide(
+                    width: 2,
+                    color: Colors.grey.shade500,
+                  ),
+                ),
+              ),
             ),
             SizedBox(height: 25),
             Text(
@@ -56,88 +71,95 @@ class SearchPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
-            Row(
-              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  width: 90,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Text(
-                      'Tugu Buaya',
+            SizedBox(
+              width: double.infinity,
+              child: Wrap(
+                alignment: WrapAlignment.start,
+                spacing: 30,
+                runSpacing: 20,
+                children: [
+                  Container(
+                    width: 90,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xfff1f1f2),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Center(
+                        child: Text(
+                          'Tugu Buaya',
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(width: 20),
-                Container(
-                  width: 60,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Text(
-                      'Promo',
+                  Container(
+                    width: 60,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xfff1f1f2),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Center(
+                        child: Text(
+                          'Promo',
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(width: 20),
-                Container(
-                  width: 90,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Text(
-                      'Uang Mas',
+                  Container(
+                    width: 90,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xfff1f1f2),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Center(
+                        child: Text(
+                          'Uang Mas',
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Row(
-              children: [
-                Container(
-                  width: 55,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Text(
-                      'Event ',
+                  Container(
+                    width: 55,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xfff1f1f2),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Center(
+                        child: Text(
+                          'Event ',
+                        ),
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(width: 15),
-                Container(
-                  width: 90,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Text(
-                      'Bundling ',
+                  Container(
+                    width: 90,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xfff1f1f2),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Center(
+                        child: Text(
+                          'Bundling ',
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             SizedBox(height: 25),
             Text(
@@ -149,32 +171,35 @@ class SearchPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
-            Row(
-              children: [
-                Container(
-                  width: 130,
-                  height: 30,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.grey,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Text(
-                      'Paket Bundling ',
+            SizedBox(
+              width: double.infinity,
+              child: Wrap(
+                alignment: WrapAlignment.start,
+                spacing: 30,
+                runSpacing: 20,
+                children: [
+                  Container(
+                    width: 60,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Color(0xfff1f1f2),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Center(
+                        child: Text(
+                          'Paket  ',
+                        ),
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-          onPressed: () {
-            Navigator.pushNamed(context, '/merchant');
-          }),
     );
   }
 }

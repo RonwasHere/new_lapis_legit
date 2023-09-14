@@ -14,7 +14,7 @@ class NotificationPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 15, top: 10, bottom: 10),
+            padding: const EdgeInsets.only(left: 20, top: 28, bottom: 10),
             child: Text(
               'Kotak Masuk',
               style: TextStyle(
@@ -24,30 +24,56 @@ class NotificationPage extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: 20),
+          Divider(thickness: 1, color: Colors.grey),
           Expanded(
             child: ListView(
               children: [
-                ListTile(
-                  title: Text(
-                    'Promo',
-                    style: TextStyle(fontSize: 15, color: Color(0xff4a4d50)),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      // top: BorderSide(),
+                      bottom: BorderSide(color: Colors.grey),
+                    ),
                   ),
-                  subtitle: Text(
-                    'Lihat semua promo disini',
-                    style: TextStyle(fontSize: 13, color: Colors.grey),
+                  child: ListTile(
+                    title: Text(
+                      'Promo',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xff4a4d50),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      'Lihat semua promo disini',
+                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                    ),
+                    trailing: Icon(Icons.arrow_forward_ios),
                   ),
-                  trailing: Icon(Icons.arrow_forward_ios),
                 ),
-                ListTile(
-                  title: Text(
-                    'Notifikasi',
-                    style: TextStyle(fontSize: 15, color: Color(0xff4a4d50)),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border(
+                      // top: BorderSide(),
+                      bottom: BorderSide(color: Colors.grey),
+                    ),
                   ),
-                  subtitle: Text(
-                    'Lihat tagihan dan pengingat disini',
-                    style: TextStyle(fontSize: 13, color: Colors.grey),
+                  child: ListTile(
+                    title: Text(
+                      'Notifikasi',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Color(0xff4a4d50),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    subtitle: Text(
+                      'Lihat tagihan dan pengingat disini',
+                      style: TextStyle(fontSize: 13, color: Colors.grey),
+                    ),
+                    trailing: Icon(Icons.arrow_forward_ios),
                   ),
-                  trailing: Icon(Icons.arrow_forward_ios),
                 ),
               ],
             ),
@@ -55,10 +81,10 @@ class NotificationPage extends StatelessWidget {
         ],
       ),
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-        Navigator.pushNamed(context, '/search');
-      }),
+          child: Icon(Icons.add),
+          onPressed: () {
+            Navigator.pushNamed(context, '/search');
+          }),
     );
   }
 }
