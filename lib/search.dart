@@ -71,6 +71,7 @@ class SearchPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
+            //warp
             SizedBox(
               width: double.infinity,
               child: Wrap(
@@ -171,6 +172,7 @@ class SearchPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 15),
+            //WRAP
             SizedBox(
               width: double.infinity,
               child: Wrap(
