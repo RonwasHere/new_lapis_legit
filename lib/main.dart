@@ -3,6 +3,7 @@ import 'package:new_lapis_legit/loginn.dart';
 import 'package:new_lapis_legit/merchant.dart';
 import 'package:new_lapis_legit/notification.dart';
 import 'package:new_lapis_legit/onboarding.dart';
+import 'package:new_lapis_legit/profile.dart';
 import 'package:new_lapis_legit/search.dart';
 import 'package:new_lapis_legit/voucher.dart';
 
@@ -19,10 +20,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/':(context) => const LoginPage(),
-        '/search':(context) => const SearchPage(),
-        '/merchant':(context) => const MerchantPage(),
-        '/voucher':(context) => const VoucherPage(),
+        '/': (context) => const ProfilePage(),
+        '/search': (context) => const SearchPage(),
+        '/merchant': (context) => const MerchantPage(),
+        '/voucher': (context) => const VoucherPage(),
       },
     );
   }
