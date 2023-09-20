@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:new_lapis_legit/loginn.dart';
 import 'package:new_lapis_legit/merchant.dart';
 import 'package:new_lapis_legit/notification.dart';
@@ -17,12 +18,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/': (context) => const ProfilePage(),
+        // '/': (context) => const ProfilePage(),
+        '/': (context) => const MerchantPage(),
         '/search': (context) => const SearchPage(),
-        '/merchant': (context) => const MerchantPage(),
+        // '/merchant': (context) => const MerchantPage(),
         '/voucher': (context) => const VoucherPage(),
       },
     );

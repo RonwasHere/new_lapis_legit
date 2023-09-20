@@ -1,8 +1,15 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 
-class ProfilePage extends StatelessWidget {
+class ProfilePage extends StatefulWidget {
   const ProfilePage({super.key});
 
+  @override
+  State<ProfilePage> createState() => _ProfilePageState();
+}
+
+class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,7 +28,6 @@ class ProfilePage extends StatelessWidget {
             //point dan myvoucher
             pointRow(),
             //list view pusat bantuan, bhs, pengaturan aplikasi,keluar, klaim point
-
             Expanded(
               child: ListView(
                 children: [
@@ -105,11 +111,13 @@ class ProfilePage extends StatelessWidget {
                   Container(
                     decoration: BoxDecoration(
                       border: Border(
-                        // top: BorderSide(),
                         bottom: BorderSide(color: Colors.grey),
                       ),
                     ),
                     child: ListTile(
+                      onTap: () {
+                        modalredeem(context);
+                      },
                       title: Text(
                         'Klaim Point',
                         style: TextStyle(
@@ -244,6 +252,100 @@ class ProfilePage extends StatelessWidget {
           child: Image.asset("assets/icon_notifikasi.png", scale: 5),
         ),
       ],
+    );
+  }
+
+  void modalredeem(contex) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          child: Padding(
+            padding: const EdgeInsets.all(15),
+            child: Container(
+              height: 350,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Redeem Point",
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20),
+                  TextFormField(
+                    style: TextStyle(fontSize: 20),
+                    decoration: InputDecoration(
+                      hintText: 'masukan code',
+                      fillColor: Colors.grey.shade600,
+                      filled: false,
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          width: 2,
+                          color: Colors.grey,
+                        ),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(
+                          width: 2,
+                          color: Colors.grey.shade500,
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Center(
+                    child: Text(
+                      "Kartu Hadian dan Promosi Code",
+                      style: TextStyle(fontSize: 15),
+                      // textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Center(
+                    child: Text(
+                      "Term and Conditions",
+                      style: TextStyle(fontSize: 15, color: Colors.orange),
+                      // textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(height: 45),
+                  Center(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: Color(0xffCCC8AA),
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'Cancel',
+                          style: TextStyle(fontSize: 25, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Center(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      child: TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.grey,
+                        ),
+                        onPressed: () {},
+                        child: Text(
+                          'Claim Point',
+                          style: TextStyle(fontSize: 25, color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:new_lapis_legit/voucher.dart';
 import 'package:new_lapis_legit/widget/container_Merchant.dart';
-
+import 'package:get/get.dart';
 class MerchantPage extends StatelessWidget {
   const MerchantPage({super.key});
 
@@ -66,7 +67,8 @@ class MerchantPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {
-            Navigator.pushNamed(context, '/voucher');
+            Get.off(VoucherPage());
+            // Navigator.pushNamed(context, '/voucher');
           }),
     );
   }

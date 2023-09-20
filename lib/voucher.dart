@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:new_lapis_legit/loginn.dart';
 import 'package:new_lapis_legit/widget/container_Voucher.dart';
 
 class VoucherPage extends StatelessWidget {
@@ -50,18 +52,25 @@ class VoucherPage extends StatelessWidget {
             SizedBox(height: 10),
             Center(
               child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.grey,
-                  ),
-                  onPressed: () {},
-                  child: Text(
-                    'Klaim Voucher',
-                    style: TextStyle(fontSize: 20),
-                  )),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.grey,
+                ),
+                onPressed: () {},
+                child: Text(
+                  'Klaim Voucher',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
             ),
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: () {
+            Get.to(LoginPage());
+            // Navigator.pushNamed(context, '/voucher');
+          }),
     );
   }
 }
