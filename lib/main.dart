@@ -20,13 +20,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      routes: {
-        // '/': (context) => const ProfilePage(),
-        '/': (context) => const MerchantPage(),
-        '/search': (context) => const SearchPage(),
-        // '/merchant': (context) => const MerchantPage(),
-        '/voucher': (context) => const VoucherPage(),
-      },
+      // routes: {
+      //   //Proses Berubah Pakek GetX
+      //   // '/': (context) => const ProfilePage(),
+      //   '/': (context) => const MerchantPage(),
+      //   '/search': (context) => const SearchPage(),
+      //   '/merchant': (context) => const MerchantPage(),
+      //   '/voucher': (context) => const VoucherPage(),
+      // },
+
+      initialRoute: '/',
+      getPages: [
+        GetPage(name: '/', page: () => MerchantPage()),
+        GetPage(name: '/search', page: () => SearchPage()),
+        GetPage(name: '/merchant', page: () => MerchantPage()),
+        GetPage(name: '/voucher', page: () => VoucherPage()),
+        GetPage(name: '/login', page: () => LoginPage()),
+        
+      ],
     );
   }
 }

@@ -67,7 +67,7 @@ class MerchantPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),
           onPressed: () {
-            Get.off(VoucherPage());
+            Get.toNamed('/voucher');
             // Navigator.pushNamed(context, '/voucher');
           }),
     );
