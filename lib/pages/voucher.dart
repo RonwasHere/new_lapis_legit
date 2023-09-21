@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:new_lapis_legit/loginn.dart';
+import 'package:new_lapis_legit/pages/loginn.dart';
 import 'package:new_lapis_legit/widget/container_Voucher.dart';
 
 class VoucherPage extends StatelessWidget {

@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:new_lapis_legit/loginn.dart';
-import 'package:new_lapis_legit/merchant.dart';
-import 'package:new_lapis_legit/notification.dart';
-import 'package:new_lapis_legit/onboarding.dart';
-import 'package:new_lapis_legit/profile.dart';
-import 'package:new_lapis_legit/search.dart';
-import 'package:new_lapis_legit/voucher.dart';
+import 'package:new_lapis_legit/pages/loginn.dart';
+import 'package:new_lapis_legit/pages/merchant.dart';
+import 'package:new_lapis_legit/pages/search.dart';
+import 'package:new_lapis_legit/pages/voucher.dart';
+
 
 void main() {
   runApp(const MyApp());

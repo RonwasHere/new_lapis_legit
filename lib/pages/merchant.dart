@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:new_lapis_legit/voucher.dart';
 import 'package:new_lapis_legit/widget/container_Merchant.dart';
 import 'package:get/get.dart';
 class MerchantPage extends StatelessWidget {
