@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:new_lapis_legit/widget/container_Merchant.dart';
 import 'package:get/get.dart';
+
 class MerchantPage extends StatelessWidget {
   const MerchantPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 0,
-        title: const Text('header app barbuat app bar'),
-      ),
+      appBar: appbar(),
       body: Padding(
-        padding: const EdgeInsets.only(left: 20.0, top: 20, right: 20),
+        padding: const EdgeInsets.only(left: 20.0, top: 20, right: 20, bottom: 10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -69,6 +67,27 @@ class MerchantPage extends StatelessWidget {
             Get.toNamed('/voucher');
             // Navigator.pushNamed(context, '/voucher');
           }),
+    );
+  }
+
+  AppBar appbar() {
+    return AppBar(
+      leading: Image.asset('assets/icon_akun.png', scale: 5),
+      backgroundColor: Colors.white,
+      elevation: 1,
+      title: Image.asset(
+        "assets/logo_isp.png",
+        height: 30,
+      ),
+      centerTitle: true,
+      actions: [
+        Image.asset('assets/icon_search.png', scale: 5),
+        SizedBox(width: 10),
+        Padding(
+          padding: const EdgeInsets.only(right: 5),
+          child: Image.asset("assets/icon_notifikasi.png", scale: 5),
+        ),
+      ],
     );
   }
 }

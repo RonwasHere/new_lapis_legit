@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:new_lapis_legit/pages/loginn.dart';
 import 'package:new_lapis_legit/pages/merchant.dart';
+import 'package:new_lapis_legit/pages/profile.dart';
 import 'package:new_lapis_legit/pages/search.dart';
 import 'package:new_lapis_legit/pages/voucher.dart';
+import 'package:new_lapis_legit/views/shopping_page.dart';
 
 
 void main() {
@@ -29,11 +31,14 @@ class MyApp extends StatelessWidget {
 
       initialRoute: '/',
       getPages: [
-        GetPage(name: '/', page: () => MerchantPage()),
+        // GetPage(name: '/', page: () => MerchantPage()),
         GetPage(name: '/search', page: () => SearchPage()),
         GetPage(name: '/merchant', page: () => MerchantPage()),
         GetPage(name: '/voucher', page: () => VoucherPage()),
         GetPage(name: '/login', page: () => LoginPage()),
+        GetPage(name: '/profile', page: () => ProfilePage()),
+        GetPage(name: '/', page: () => ShoppingPage()),
+        
         
       ],
     );
