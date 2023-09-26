@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:new_lapis_legit/controllers/cart_controller.dart';
 import 'package:new_lapis_legit/controllers/shopping_controller.dart';
 
 class ShoppingPage extends StatelessWidget {
   final shoppingController = Get.put(ShoppingController());
+  final cartController = Get.put(CartController());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.teal,
       body: SafeArea(
         child: Column(
           children: [
@@ -43,7 +46,7 @@ class ShoppingPage extends StatelessWidget {
                               ),
                               TextButton(
                                 onPressed: () {
-                                  // cartController.addToCart(controller.products[index]);
+                                  cartController.addToCart(controller.products[index]);
                                 },
                                 style: TextButton.styleFrom(
                                   backgroundColor: Colors.yellow.shade200,
@@ -59,9 +62,30 @@ class ShoppingPage extends StatelessWidget {
                 },
               ),
             ),
-            Text('Total Ammount = '),
+            GetX<CartController>(builder: (controller) {
+              return Text(
+                'Total Ammount = \$ ${controller.totalPrice}',
+                style: TextStyle(fontSize: 30),
+              );
+            }),
             SizedBox(height: 100),
           ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        backgroundColor: Colors.amber,
+        icon: Icon(
+          Icons.add_shopping_cart_rounded,
+          color: Colors.black,
+        ),
+        label: GetX<CartController>(
+          builder: (controller) {
+            return Text(
+              controller.count.toString(),
+              style: TextStyle(color: Colors.black, fontSize: 25),
+            );
+          },
         ),
       ),
     );
