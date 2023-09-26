@@ -32,12 +32,13 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       getPages: [
         // GetPage(name: '/', page: () => MerchantPage()),
-        GetPage(name: '/search', page: () => SearchPage()),
-        GetPage(name: '/merchant', page: () => MerchantPage()),
-        GetPage(name: '/voucher', page: () => VoucherPage()),
-        GetPage(name: '/login', page: () => LoginPage()),
-        GetPage(name: '/profile', page: () => ProfilePage()),
-        GetPage(name: '/', page: () => ShoppingPage()),
+        GetPage(name: '/search', page: () => SearchPage()), //ini lapislegit desain baru
+        GetPage(name: '/merchant', page: () => MerchantPage()), //ini lapislegit desain baru
+        GetPage(name: '/voucher', page: () => VoucherPage()), //ini lapislegit desain baru
+        GetPage(name: '/login', page: () => LoginPage()), //ini lapislegit desain baru
+        GetPage(name: '/profile', page: () => ProfilePage()), //ini lapislegit desain baru
+        
+        GetPage(name: '/', page: () => ShoppingPage()), //tutorial-1 dr playlist GetX
         
         
       ],
