@@ -53,6 +53,16 @@ class ShoppingPage extends StatelessWidget {
                                 ),
                                 child: Text('Add to Cart'),
                               ),
+                              Obx(
+                                () => IconButton(
+                                  onPressed: () {
+                                    controller.products[index].isFavorite.toggle();
+                                  },
+                                  icon: controller.products[index].isFavorite.value
+                                      ? Icon(Icons.check_box_rounded)
+                                      : Icon(Icons.check_box_outline_blank_outlined),
+                                ),
+                              ),
                             ],
                           ),
                         ),

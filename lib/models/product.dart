@@ -1,3 +1,5 @@
+import 'package:get/get.dart';
+
 class Product {
   final int id;
   final String productName;
@@ -13,4 +15,5 @@ class Product {
     required this.price
   });
   
+  final isFavorite = false.obs;
 }
