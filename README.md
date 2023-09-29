@@ -12,4 +12,6 @@ TUTORIAL 1 GETX
 
 TUTORIAL 2 DYNAMIC CHECKBOX
 
+dr youtube == https://www.youtube.com/watch?v=PkHPw9npmqU
+
 ![tempsnip2](https://github.com/RonwasHere/new_lapis_legit/assets/97945445/4a948419-6c9d-4397-8300-1fe254df3ab8)
